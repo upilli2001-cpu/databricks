@@ -1,24 +1,29 @@
 bundle:
   name: databricks_demo
+
 include:
   - resources/*.yml
+
 variables:
   environment:
     description: Deployment environment
     default: dev
+
 workspace:
-  root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}
+  root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+
 targets:
   dev:
     mode: development
-    default: true
     workspace:
-      host: https://dbc-073a66fc-5c00.cloud.databricks.com/
+      host: https://dbc-073a66fc-5c00.cloud.databricks.com
     variables:
       environment: dev
+
   prod:
     mode: production
     workspace:
-      host: https://dbc-073a66fc-5c00.cloud.databricks.com/
+      host: https://dbc-073a66fc-5c00.cloud.databricks.com
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/prod
     variables:
       environment: prod
