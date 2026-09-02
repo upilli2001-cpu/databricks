@@ -1,0 +1,8 @@
+resources:
+  jobs:
+    hello_world_job:
+      name: hello_world_job_${var.environment}
+      tasks:
+        - task_key: run_notebook
+          notebook_task:
+            notebook_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/files/notebooks/hello_world.py
