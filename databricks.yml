@@ -1,4 +1,3 @@
-
 bundle:
   name: databricks_demo
 
@@ -23,5 +22,3 @@ targets:
       host: https://dbc-073a66fc-5c00.cloud.databricks.com/
     variables:
       environment: prod
-	  
-	  
