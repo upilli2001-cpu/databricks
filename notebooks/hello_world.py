@@ -1,5 +1,5 @@
 # Databricks notebook source
-print("Hello from Databricks Version 1.0.0 from git enabled databricks repo!")
+print("Hello from Databricks Version 1.0.1.0 from git enabled databricks repo!")
 
 # COMMAND ----------
 
